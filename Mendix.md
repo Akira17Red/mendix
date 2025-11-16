@@ -1,25 +1,42 @@
 # Mendix
 
+## Indice
+
+1. Prologo
+    - Introduzione
+    - Documentazione
+    - Download
+
+2. Mendix Portal
+    - Projects
+    - Scrum Team
+    - User Stories
+
+3. Mendix Studio Pro
+
+
+# Prologo
+
+## 1.1 Introduzione
+
 Mendix è un software che ti aiuta in tutti gli stadi di vita di un'applicazione, ti aiuta quindi nell'ALM (Application Lifecycle Management)
 
-## Documentazione
+## 1.2 Documentazione
 
 Clicca [qui](https://docs.mendix.com/) per la documentazione di Mendix.
 Da Mendix Studio Pro puoi premere F1 per venir reindirizzato direttamente al link.
 
-## Download
+## 1.3 Download
 
 Clicca [qui](https://academy.mendix.com/link/modules/715/lectures/5454/1.3.1-Download-Mendix-Studio-Pro) per installare la versione 11 di Mendix Studio Pro
 
-## Mendix Portal
+# Mendix Portal
+
+## 2.1 Projects
 
 All'interno del portale di Mendix si possono vedere tutti i progetti di cui si fa parte oltre che quelli che si ha creato. Ci si può muovere all'interno del portale di Mendix da Studio Pro tramite l'apposito [pulsante](/images/Mendix%20UI/btn-portal.png) sull'interfaccia utente
 
-## Creare una nuova App
-
-Da Mendix Studio Pro si crea una nuova app col pulsante apposito
-
-## Scrum Team
+## 2.2 Scrum Team
 
 Un team su Mendix è composto da:
 
@@ -29,7 +46,7 @@ Un team su Mendix è composto da:
 
 Si può vedere l'intero team (oltre che aggiungere/togliere partecipanti e assegnare i ruoli) dal portale di Mendix del progetto interessato nella sezione General/Team.
 
-## User stories
+## 2.3 User stories
 
 Le user stories descrivono le esigenze del cliente che la nostra applicazione deve essere in grado di fornire.
 
@@ -49,3 +66,8 @@ Ogni nuova user-story viene aggiunta al product ***backlog***, una lista delle f
 
 Uno ***sprint*** è un periodo di tempo predefinito che serve per raggiungere un certo obiettivo, di solito ha una durata di due settimane.
 
+# Mendix Studio Pro
+
+## new App
+
+Da Mendix Studio Pro si crea una nuova app col pulsante apposito

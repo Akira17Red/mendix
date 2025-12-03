@@ -516,3 +516,92 @@ Il menu di navigazione è quello che serve per navigare tra le pagine ovunque ci
 
 Per aggiungere delle pagine al menu di navigazione principale bisogna selezionare l'app all'app explorer/Navigation/New item e qui specificare le pagine che si vogliono mostrare, oltre che l'icona e la caption.
 
+# Custom Logic
+
+In Mendix possiamo creare la logica della nostra pagina.
+E' possibile richiamare le nostre funzioni quando "accade" qualcosa:
+
+- Viene cliccato un bottone
+- Viene creato un oggetto
+- Si interagisce in un certo modo con la pagina
+
+Ci sono più tipi di elementi che si occupano di gestire la logica all'interno di Mendix:
+
+- Microflows (hanno bisogno della connessione internet per fare richieste al server, sono dunque funzioni server-side)
+- Nanoflows (non hanno bisogno della connessione internet per utilizzarli, sono dunque client-side e sono dunque più veloci dei microflows)
+- Workflows (gestiscono logica che richiede più interazione con l'utente)
+
+## Microflows
+
+Per creare un microflow basta cliccare col tasto destro sul nostro modulo (o cartella) > add Microflow
+
+## Logic components
+
+Questa è la lista di ciò che compone tutti i flows:
+
+- Start Event: indicato col punto verde, indica l'inizio della funzione, ci può essere un solo Start Events per flow.
+
+- End Event: indicato col punto rosso, indica la fine della funzione, ci possono essere più End Events all'interno della nostra funzione
+
+- Sequence flows: sono le frecce che indicano il susseguirsi degli eventi all'interno dei flows
+
+- Annotation flows: servono per collegare gli altri componenti a delle annotazioni
+
+- Activities: sono le funzioni effettive che si possono utilizzare (create object, change object ecc)
+
+- Decisions: sono gli if all'interno dei linguaggi di programmazione
+
+- Merges: sono i punti di raccolta, infatti tutti gli altri componenti possono ricevere esattamente una freccia, ovvero due azioni non possono confluire in un altro blocco ma nel merge sì.
+
+- Parameters: sono i parametri del microflow, ovvero della funzione. Si possono utilizzare i dati della pagina cui è stata richiamato quel microflow.
+
+- Annotations: sono i commenti
+
+## Activities
+
+Qua ci sarà un elenco di tutte le activities (alcune in comune tra tutti e 3 i flows ed altre non) all'interno della toolbox presente nei flows.
+
+### Show page
+
+Questa attività mostra una pagina. Ricorda che le pagine che richiedono un parametro necessitano che glielo venga passato altrimenti si riceve un errore!
+
+Parti importanti:
+
+- Pagina da mostrare
+- Parametro da passare
+
+### Create object
+
+Quando non si ha il parametro all'interno della pagina da passare alla pagina lo si crea!
+
+Parti importanti:
+
+- L'oggetto che si vuole creare (dichiarazione)
+- I valori dell'oggetto che si vogliono assegnare (assegnazione)
+- Nome dell'oggetto (denominazione)
+
+Per gli attributi che non verranno assegnati nella creazione dell'oggetto gli verrà dato il valore di default.
+Member indica dunque l'attributo (o l'associazione) cui si vuole dare un valore.
+Con CTRL + space vedo tutte le variabili che ho a disposizione.
+
+## Naming convention
+
+[Qui](https://docs.mendix.com/refguide/dev-best-practices/) trovi la documentazione ufficiale per la convenzione dei nomi dei flows.
+
+I microflows usano questa convenvione per i nomi:
+
+- PREFIX_Entity_Operation
+
+Tutti i flows generati dall'azione di un utente utilizzano il prefisso ACT, per cui la maggior parte delle volte si utilizzerà questo prefisso per la maggior parte dei flows.
+
+- Come secondo campo si usa l'entità sulla quale si va a lavorare
+
+- Come operazione si cerca di descrivere cosa fa quella funzione nello specifico (tipo il nome delle funzioni nei linguaggi di programmazione)
+
+# AI
+
+## Logic Recommender
+
+Quando si sta creando un'app con Studio Pro si può far uso dell'assistente AI Logic Recommender, che nei microflows ci consiglia quali azioni prendere suggerendo diverse linee in base alle informazioni che ha a disposizione nella logica che stiamo creando.
+
+Si può disattivare andando su Edit > Preferences > Maia menu
